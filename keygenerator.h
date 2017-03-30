@@ -15,6 +15,9 @@ public:
     explicit KeyGenerator(QWidget *parent = 0);
     ~KeyGenerator();
 
+private slots:
+    void on_pushButton_Generate_clicked();
+
 private:
     Ui::KeyGenerator *ui;
 };
