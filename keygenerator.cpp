@@ -20,14 +20,22 @@ void KeyGenerator::on_pushButton_Generate_clicked()
     srand(time(0));
 
     QString str[4];
-    QString temp;
+    int count = 0;
+
     for(int i = 0; i < 4; i++){
-        for(int j = 0; j < 4; j++){
-            temp += rand() % 26 + 65;
-        }
-        str[i] = temp;
-        temp = "";
+        do{
+            count = 0;
+            str[i] = "";
+            for(int j = 0; j < 4; j++){
+                int temp = rand() % 26 + 65;
+                str[i] += temp;
+                count += temp;
+            }
+
+        }while(count != 300);
     }
+
+    QString temp;
 
     for(int i = 0; i < 4; i++){
         temp += str[i];
