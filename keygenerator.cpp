@@ -44,3 +44,8 @@ void KeyGenerator::on_pushButton_Generate_clicked()
     }
     ui->lineEdit_Key->setText(temp);
 }
+
+void KeyGenerator::on_pushButton_Cancel_clicked()
+{
+    QApplication::quit();
+}
