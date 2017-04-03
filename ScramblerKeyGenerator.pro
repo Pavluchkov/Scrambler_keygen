@@ -29,3 +29,5 @@ SOURCES += main.cpp\
 HEADERS  += keygenerator.h
 
 FORMS    += keygenerator.ui
+
+RC_FILE = keyGenerator.rc
